@@ -3,7 +3,7 @@
 ## 1. Executive Summary
 - **Total Deliveries Evaluated**: 13
 - **Overall Classification Accuracy**: **100.0%** (13/13)
-- **Turn Angle Mean Absolute Error (MAE)**: **0.18°**
+- **Turn Angle Mean Absolute Error (MAE)**: **0.20°**
 - **Turn Angle Root Mean Square Error (RMSE)**: **0.23°**
 
 ## 2. Confusion Matrix
@@ -32,19 +32,19 @@ Rows represent **Ground Truth** classes; columns represent **Predicted** classes
 
 | Clip / Test Case | Batsman Hand | True Class | Pred Class | True Turn (°) | Pred Turn (°) | Error (°) | Status |
 | :--- | :---: | :--- | :--- | :---: | :---: | :---: | :---: |
-| `clip_offspin_rhb_01.mp4` | RIGHT | `OFF_SPIN` | `OFF_SPIN` | 3.8° | 3.8° | 0.04° | ✅ PASS |
-| `clip_offspin_rhb_02.mp4` | RIGHT | `OFF_SPIN` | `OFF_SPIN` | 4.5° | 4.5° | 0.05° | ✅ PASS |
-| `clip_offspin_lhb_01.mp4` | LEFT | `OFF_SPIN` | `OFF_SPIN` | 3.2° | 3.1° | 0.08° | ✅ PASS |
-| `clip_legspin_rhb_01.mp4` | RIGHT | `LEG_SPIN` | `LEG_SPIN` | 4.2° | 4.0° | 0.15° | ✅ PASS |
-| `clip_legspin_rhb_02.mp4` | RIGHT | `LEG_SPIN` | `LEG_SPIN` | 5.1° | 5.0° | 0.05° | ✅ PASS |
-| `clip_legspin_lhb_01.mp4` | LEFT | `LEG_SPIN` | `LEG_SPIN` | 3.9° | 3.8° | 0.06° | ✅ PASS |
-| `clip_inswing_rhb_01.mp4` | RIGHT | `INSWING` | `INSWING` | 0.4° | 0.1° | 0.33° | ✅ PASS |
-| `clip_inswing_lhb_01.mp4` | LEFT | `INSWING` | `INSWING` | 0.3° | 0.2° | 0.09° | ✅ PASS |
-| `clip_outswing_rhb_01.mp4` | RIGHT | `OUTSWING` | `OUTSWING` | 0.5° | 0.1° | 0.41° | ✅ PASS |
-| `clip_outswing_lhb_01.mp4` | LEFT | `OUTSWING` | `OUTSWING` | 0.4° | 0.1° | 0.28° | ✅ PASS |
-| `clip_straight_seam_01.mp4` | RIGHT | `STRAIGHT` | `STRAIGHT` | 0.2° | 0.1° | 0.15° | ✅ PASS |
-| `clip_straight_spin_01.mp4` | RIGHT | `STRAIGHT` | `STRAIGHT` | 0.6° | 0.1° | 0.50° | ✅ PASS |
-| `clip_straight_lhb_01.mp4` | LEFT | `STRAIGHT` | `STRAIGHT` | 0.3° | 0.2° | 0.10° | ✅ PASS |
+| `clip_offspin_rhb_01.mp4` | RIGHT | `OFF_SPIN` | `OFF_SPIN` | 3.8° | 3.8° | 0.02° | ✅ PASS |
+| `clip_offspin_rhb_02.mp4` | RIGHT | `OFF_SPIN` | `OFF_SPIN` | 4.5° | 4.3° | 0.18° | ✅ PASS |
+| `clip_offspin_lhb_01.mp4` | LEFT | `OFF_SPIN` | `OFF_SPIN` | 3.2° | 3.3° | 0.08° | ✅ PASS |
+| `clip_legspin_rhb_01.mp4` | RIGHT | `LEG_SPIN` | `LEG_SPIN` | 4.2° | 4.0° | 0.18° | ✅ PASS |
+| `clip_legspin_rhb_02.mp4` | RIGHT | `LEG_SPIN` | `LEG_SPIN` | 5.1° | 4.9° | 0.16° | ✅ PASS |
+| `clip_legspin_lhb_01.mp4` | LEFT | `LEG_SPIN` | `LEG_SPIN` | 3.9° | 3.8° | 0.14° | ✅ PASS |
+| `clip_inswing_rhb_01.mp4` | RIGHT | `INSWING` | `INSWING` | 0.4° | 0.2° | 0.20° | ✅ PASS |
+| `clip_inswing_lhb_01.mp4` | LEFT | `INSWING` | `INSWING` | 0.3° | 0.1° | 0.18° | ✅ PASS |
+| `clip_outswing_rhb_01.mp4` | RIGHT | `OUTSWING` | `OUTSWING` | 0.5° | 0.1° | 0.36° | ✅ PASS |
+| `clip_outswing_lhb_01.mp4` | LEFT | `OUTSWING` | `OUTSWING` | 0.4° | 0.1° | 0.27° | ✅ PASS |
+| `clip_straight_seam_01.mp4` | RIGHT | `STRAIGHT` | `STRAIGHT` | 0.2° | 0.0° | 0.16° | ✅ PASS |
+| `clip_straight_spin_01.mp4` | RIGHT | `STRAIGHT` | `STRAIGHT` | 0.6° | 0.1° | 0.49° | ✅ PASS |
+| `clip_straight_lhb_01.mp4` | LEFT | `STRAIGHT` | `STRAIGHT` | 0.3° | 0.2° | 0.13° | ✅ PASS |
 
 ## 5. Identified Failure Modes
 1. **Borderline Spin Thresholds (1.3° – 1.6°)**: Deliveries with turn near `TURN_MIN_DEG` (1.5°) can occasionally be categorized as `STRAIGHT` due to sub-pixel tracking jitter.
